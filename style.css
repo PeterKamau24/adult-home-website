@@ -1,36 +1,114 @@
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
+/* 🎨 Color Theme */
+:root {
+  --primary: #bcd4e6;
+  --accent: #f9c74f;
+  --bg: #f8f8f8;
+  --text: #333;
 }
 
+/* 🧱 Base Styles */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* 🧭 Layout Structure */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* 🔝 Header */
 header {
-  background-color: #bcd4e6;
+  background-color: var(--primary);
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #333;
+  color: var(--text);
 }
 
-section {
-  padding: 20px;
-}
-
+/* 👣 Footer */
 footer {
-  background-color: #bcd4e6;
+  background-color: var(--primary);
   text-align: center;
   padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-#gallery {
-  padding: 20px;
+
+/* 🌄 Hero Section */
+#hero {
+  background-image: url('https://images.unsplash.com/photo-1588776814546-3d1f80a2f6dc?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background-color: #f0f4f8;
+  padding: 0 20px;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: var(--accent);
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #f9844a;
+}
+
+/* 🖼️ Gallery Section */
+#gallery {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #eef2f3;
 }
 
 .gallery {
@@ -47,4 +125,13 @@ footer {
   height: 200px;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🪄 Alternating Section Backgrounds */
+#about, #contact {
+  background-color: #ffffff;
+}
+
+#services, #gallery {
+  background-color: #eef2f3;
 }
